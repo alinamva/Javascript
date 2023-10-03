@@ -1,1 +1,149 @@
 // objects
+// function limesToCut(wedgesNeeded, limes) {
+//   let count = 0;
+//   let i = 0;
+//   while (count < wedgesNeeded && i < limes.length) {
+//     if (limes[i] == "small") {
+//       count += 6;
+//     } else if (limes[i] == "medium") {
+//       count += 8;
+//     } else {
+//       count += 10;
+//     }
+//     i++;
+//   }
+//   return i;
+// }
+
+// console.log(
+//   limesToCut(230, [
+//     "small",
+//     "large",
+//     "large",
+//     "medium",
+//     "small",
+//     "large",
+//     "large",
+//   ])
+// );
+
+// function time(name) {
+//   switch (name) {
+//     case "Tropical Island":
+//       return 3;
+//       break;
+//     case "Berries & Lime":
+//       return 2.5;
+//       break;
+//     case "Pure Strawberry Joy":
+//       return 0.5;
+//       break;
+//     case "Green Garden":
+//       return 1.5;
+//       break;
+//     case "Energizer":
+//       return 1.5;
+//       break;
+//     case "All or Nothing":
+//       return 5;
+//       break;
+//     default:
+//       return 2.5;
+//   }
+// }
+
+// // console.log(time("Energizer"));
+
+// function remainingOrders(timeLeft, orders) {
+//   // const newArr = [];
+//   let i = 0;
+
+//   while (i < orders.length && timeLeft > 0) {
+//     const juice = orders[i];
+//     const juiceTime = time(juice);
+
+//     if (juiceTime > 0) {
+//       // newArr.push(juice);
+//       timeLeft -= juiceTime;
+//       i++;
+//     } else {
+//       break;
+//     }
+//   }
+
+//   // Get the remaining orders
+//   const remainingOrders = orders.slice(i);
+
+//   return remainingOrders;
+// }
+
+// console.log(
+//   remainingOrders(13, [
+//     "Pure Strawberry Joy",
+//     "Pure Strawberry Joy",
+//     "Vitality",
+//     "Tropical Island",
+//     "All or Nothing",
+//     "All or Nothing",
+//     "All or Nothing",
+//     "Green Garden",
+
+//     "Limetime",
+//   ])
+// );
+
+// function createScoreBoard() {
+//   const obj = {};
+//   obj["The Best Ever"] = 1000000;
+//   console.log(obj);
+// }
+// createScoreBoard();
+// function addPlayer(scoreBoard, player, score) {
+//   let obj = {};
+//   obj = scoreBoard;
+//   obj[player] = score;
+//   console.log(obj);
+// }
+// const scoreBoard = {
+//   "Amil Pastorius": 99373,
+//   "Min-seo Shin": 0,
+// };
+// addPlayer(scoreBoard, "Jesse Johnson", 1337);
+
+// function removePlayer(scoreBoard, player) {
+//   delete scoreBoard[player];
+//   console.log(scoreBoard);
+// }
+
+// const scoreBoard = {
+//   "Amil Pastorius": 99373,
+//   "Min-seo Shin": 0,
+//   "Jesse Johnson": 1337,
+// };
+// removePlayer(scoreBoard, "Jesse Johnson");
+
+// function updateScore(scoreBoard, player, points) {
+//   scoreBoard[player] += points;
+//   console.log(scoreBoard);
+// }
+// const scoreBoard = {
+//   "Amil Pastorius": 99373,
+//   "Min-seo Shin": 3,
+//   "Jesse Johnson": 1337,
+// };
+// updateScore(scoreBoard, "Min-seo Shin", 1999);
+
+// function applyMondayBonus(scoreBoard) {
+//   for (let key in scoreBoard) {
+//     scoreBoard[key] += 100;
+//   }
+//   console.log(scoreBoard);
+// }
+
+// const scoreBoard = {
+//   "Dave Thomas": 44,
+//   "Freyja Ćirić": 539,
+//   "José Valim": 265,
+// };
+
+// applyMondayBonus(scoreBoard);

@@ -85,20 +85,120 @@
 
 // console.log(addSecretIngredient(friendsList, myList));
 
-function scaleRecipe(recipe, num) {
-  let newObj = {};
+// function scaleRecipe(recipe, num) {
+//   let newObj = {};
 
-  for (let i in recipe) {
-    newObj[i] = (recipe[i] * num) / 2;
-  }
-  return newObj;
+//   for (let i in recipe) {
+//     newObj[i] = (recipe[i] * num) / 2;
+//   }
+//   return newObj;
+// }
+
+// const recipe = {
+//   noodles: 200,
+//   sauce: 0.5,
+//   mozzarella: 1,
+//   meat: 100,
+// };
+
+// console.log(scaleRecipe(recipe, 3));
+
+// rest spread
+//destructuring
+// function getFirstCard(deck) {
+//   let [first] = deck;
+//   return first;
+// }
+
+// console.log(getFirstCard([3]));
+// function getSecondCard(deck) {
+//   let [first, second] = deck;
+//   return second;
+// }
+
+// console.log(getSecondCard([3, 4]));
+// function swapTopTwoCards(deck) {
+//   let [one, two, ...rest] = deck;
+
+//   return [two, one, ...rest];
+// }
+// console.log(swapTopTwoCards([10, 7, 1, 2, 3, 4, 3]));
+
+// function discardTopCard(deck) {
+//   let [first, ...rest] = deck;
+//   return [first, [...rest]];
+// }
+
+// console.log(discardTopCard([7, 3, 56, 23, 24]));
+
+// const adds = ["one", "two", "three"];
+
+// function insertCards(deck) {
+//   const [first, ...rest] = deck;
+//   return [first, ...adds, ...rest];
+// }
+
+// console.log(insertCards([1, 2, 3]));
+
+// function getCardPosition(stack, card) {
+//   return stack.indexOf(card);
+// }
+// console.log(getCardPosition([1, 2, 3], 2));
+
+// function isEachCardEven(stack) {
+//   return stack.every((card) => card % 2 == 0);
+// }
+// console.log(isEachCardEven([6, 2, 10, 4, 2]));
+
+// function getFirstOddCard(stack) {
+//   let firstOdd = stack.find((card) => card % 2 !== 0);
+//   return firstOdd;
+// }
+// console.log(getFirstOddCard([2, 6, 5, 4, 2, 3]));
+
+// function getFirstEvenCardPosition(stack) {
+// let firstEven = stack.find((card) => card % 2 == 0);
+// return stack.indexOf(firstEven);
+
+//   return stack.findIndex((card) => card % 2 == 0);
+// }
+
+// console.log(getFirstEvenCardPosition([2, 4, 6, 8, 3, 5]));
+// function threeOfEachThree(deck) {
+//   let threeDeck = [];
+//   for (let card of deck) {
+//     if (card == 3) {
+//       threeDeck.push(3, 3, 3);
+//     } else {
+//       threeDeck.push(card);
+//     }
+//   }
+//   return threeDeck;
+// }
+// console.log(threeOfEachThree([1, 2, 3, 5, 6, 3, 5]));
+
+// function sandwichTrick(deck) {
+//   let first = deck.pop();
+//   let last = deck.shift();
+//   let middle = deck.length / 2;
+//   deck.splice(middle, 0, first, last);
+//   return deck;
+// }
+
+// console.log(sandwichTrick([1, 2, 3, 5, 6, 10]));
+// function twoIsSpecial(deck) {
+//   let arr = [];
+//   deck.filter((card) => {
+//     if (card == 2) {
+//       arr.push(card);
+//     }
+//   });
+//   return arr;
+// }
+
+// console.log(twoIsSpecial([2, 4, 2, 3, 2, 5, 7]));
+
+function perfectlyOrdered(deck) {
+  return deck.sort((a, b) => a - b);
 }
-
-const recipe = {
-  noodles: 200,
-  sauce: 0.5,
-  mozzarella: 1,
-  meat: 100,
-};
-
-console.log(scaleRecipe(recipe, 3));
+console.log(perfectlyOrdered([6, 10, 5, 9, 4, 3, 7, 7, 1, 2, 6, 8, 1, 3]));

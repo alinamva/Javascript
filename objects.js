@@ -190,29 +190,47 @@
 // console.log(ticketStatus(tickets, "23LA9T41"));
 // console.log(ticketStatus(tickets, "RE90VAW7"));
 
-function gtcVersion(visitor) {
-  if (visitor.gtc?.signed === true) {
-    return visitor.gtc.version;
-  } else {
-    return undefined;
-  }
+// function gtcVersion(visitor) {
+//   if (visitor.gtc?.signed === true) {
+//     return visitor.gtc.version;
+//   } else {
+//     return undefined;
+//   }
+// }
+
+// const visitorNew = {
+//   name: "Verena Nardi",
+//   age: 45,
+//   ticketId: "H32AZ123",
+//   gtc: {
+//     signed: true,
+//     version: "2.1",
+//   },
+// };
+// const visitorOld = {
+//   name: "Verena Nardi",
+//   age: 45,
+//   ticketId: "H32AZ123",
+// };
+
+// console.log(gtcVersion(visitorOld));
+
+// console.log(gtcVersion(visitorNew));
+// let obj = {
+//   1: ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+//   2: ["D", "G"],
+//   3: ["B", "C", "M", "P"],
+//   4: ["F", "H", "V", "W", "Y"],
+//   5: ["K"],
+//   8: ["J", "X"],
+//   10: ["Q", "Z"],
+// };
+// const transform = (obj) => {
+const obj = { 1: ["A", "E", "I", "O", "U"] };
+let exp = {};
+for (let i = 1; i < obj[1].length; i++) {
+  console.log(obj[i]);
 }
-
-const visitorNew = {
-  name: "Verena Nardi",
-  age: 45,
-  ticketId: "H32AZ123",
-  gtc: {
-    signed: true,
-    version: "2.1",
-  },
-};
-const visitorOld = {
-  name: "Verena Nardi",
-  age: 45,
-  ticketId: "H32AZ123",
-};
-
-console.log(gtcVersion(visitorOld));
-
-console.log(gtcVersion(visitorNew));
+// console.log(obj[1]);
+// };
+// console.log(transform(ob));

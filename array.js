@@ -198,7 +198,100 @@
 
 // console.log(twoIsSpecial([2, 4, 2, 3, 2, 5, 7]));
 
-function perfectlyOrdered(deck) {
-  return deck.sort((a, b) => a - b);
-}
-console.log(perfectlyOrdered([6, 10, 5, 9, 4, 3, 7, 7, 1, 2, 6, 8, 1, 3]));
+// function perfectlyOrdered(deck) {
+//   return deck.sort((a, b) => a - b);
+// }
+// console.log(perfectlyOrdered([6, 10, 5, 9, 4, 3, 7, 7, 1, 2, 6, 8, 1, 3]));
+
+// function reorder(deck) {
+//   let arr = [];
+//   for (let i = deck.length - 1; i > 0; i--) {
+//     arr.push(deck[i]);
+//   }
+//   return arr;
+// }
+
+// console.log(reorder([6, 10, 5, 9, 4, 3, 7, 7, 1, 2, 6, 8, 1, 3]));
+
+// function cardTypeCheck(stack, card) {
+//   let sum = 0;
+//   stack.forEach((num) => {
+//     if (num === card) {
+//       sum++;
+//     } else {
+//       sum;
+//     }
+//   });
+//   return sum;
+// }
+
+// console.log(cardTypeCheck([1, 2, 3, 3, 3, 3, 4], 3));
+// function determineOddEvenCards(stack, type) {
+//   let sum = 0;
+//   for (let num of stack) {
+//     if (type === true && num % 2 == 0) {
+//       sum++;
+//     } else if (type === false && num % 2 !== 0) {
+//       sum++;
+//     }
+//   }
+//   return sum;
+// }
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], true));
+// console.log(determineOddEvenCards([1, 2, 3, 1, 5, 6], false));
+
+// function pizzaPrice(pizza, ...extras) {
+//   let price = {
+//     Margherita: 7,
+//     Caprese: 9,
+//     Formaggio: 10,
+//     ExtraToppings: 2,
+//     ExtraSauce: 1,
+//   };
+
+//   if (extras.length > 0) {
+//     return price[pizza] + pizzaPrice(...extras);
+//   } else {
+//     return price[pizza];
+//   }
+// }
+// console.log(
+//   pizzaPrice(
+//     "Caprese",
+//     "ExtraToppings",
+//     "ExtraToppings",
+//     "ExtraToppings",
+//     "ExtraToppings"
+//   )
+// );
+
+// function orderPrice(pizzaOrders) {
+//   let total = 0;
+//   for (const order of pizzaOrders) {
+//     total += pizzaPrice(order.pizza, ...order.extras);
+//   }
+//   return total;
+// }
+// console.log(orderPrice("Caprese", "ExtraToppings"));
+
+const colors = [
+  "black",
+  "brown",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "violet",
+  "grey",
+  "white",
+];
+const decodedValue = (col) => {
+  let index = "";
+  for (let i = 0; i < 2; i++) {
+    let str = String(colors.indexOf(col[i]));
+    index += str;
+  }
+  return Number(index);
+};
+console.log(decodedValue(["brown", "red", "blue"]));
